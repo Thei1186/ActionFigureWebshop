@@ -25,25 +25,25 @@ namespace ActionFigureWebshop.Infrastructure.SQL.Repositories
             return actionFigure;
         }
 
-        public ActionFigure delete(ActionFigure actionFigure)
+        public ActionFigure Delete(ActionFigure actionFigure)
         {
             var actionFigureToRemoved = _ShopContext.Remove(actionFigure).Entity;
             _ShopContext.SaveChanges();
             return actionFigureToRemoved;
         }
 
-        public ActionFigure GetActionFigureById(ActionFigure actionFigure)
+        public ActionFigure GetActionFigureById(int id)
         {
-            return _ShopContext.ActionFigures.FirstOrDefault(af=> af.Id== actionFigure.Id);
+            return _ShopContext.ActionFigures.FirstOrDefault(af=> af.Id== id);
         }
 
 
-        public List<ActionFigure> readAll()
+        public List<ActionFigure> ReadAll()
         {
             return _ShopContext.ActionFigures.ToList();
         }
 
-        public ActionFigure update(ActionFigure actionFigure)
+        public ActionFigure Update(ActionFigure actionFigure)
         {
             _ShopContext.Attach(actionFigure).State = EntityState.Modified;
             _ShopContext.SaveChanges();
