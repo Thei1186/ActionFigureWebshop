@@ -10,8 +10,8 @@ namespace ActionFigureWebshop.Core.DomainServices
 
         ActionFigure GetActionFigureById(ActionFigure actionFigure);
 
-        ActionFigure update(ActionFigure actionFigure);
-        ActionFigure delete(ActionFigure actionFigure);
+        ActionFigure Update(ActionFigure actionFigure);
+        ActionFigure Delete(ActionFigure actionFigure);
 
     }
 }
