@@ -4,7 +4,7 @@ using ActionFigureWebshop.Core.Entity;
 
 namespace ActionFigureWebshop.Infrastructure.SQL.Repositories
 {
-    public class ActioFigureRepories : IActionFigureRepository
+    public class ActionFigureRepositories : IActionFigureRepository
     {
         public ActionFigure Creat(ActionFigure actionFigure)
         {
@@ -12,6 +12,11 @@ namespace ActionFigureWebshop.Infrastructure.SQL.Repositories
         }
 
         public ActionFigure delete(ActionFigure actionFigure)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public ActionFigure GetActionFigureById(ActionFigure actionFigure)
         {
             throw new System.NotImplementedException();
         }
