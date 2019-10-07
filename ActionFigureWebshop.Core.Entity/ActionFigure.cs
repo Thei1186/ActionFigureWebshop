@@ -6,11 +6,11 @@ namespace ActionFigureWebshop.Core.Entity
     public class ActionFigure
     {
         public int  Id {get;set;}
-        public string name { get; set; }
-        public double price { get; set;}
-        public int size { get; set; }
+        public string Name { get; set; }
+        public double Price { get; set;}
+        public int Size { get; set; }
         public double Weight { get; set; }
         public  string Material { get; set; }
-        public  string color { get; set; }
+        public  string Color { get; set; }
     }
 }
