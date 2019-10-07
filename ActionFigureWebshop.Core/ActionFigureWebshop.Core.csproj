@@ -5,10 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="ApplicationServices\Services\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\ActionFigureWebshop.Core.Entity\ActionFigureWebshop.Core.Entity.csproj" />
   </ItemGroup>
 

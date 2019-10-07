@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29230.47
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ActionFigureWebshop.Core", "ActionFigureWebshop.Core\ActionFigureWebshop.Core.csproj", "{E8FE6DA2-D24D-4EA4-BA95-0B294AA36FDF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ActionFigureWebshop.Core", "ActionFigureWebshop.Core\ActionFigureWebshop.Core.csproj", "{E8FE6DA2-D24D-4EA4-BA95-0B294AA36FDF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ActionFigureWebshop.Core.Entity", "ActionFigureWebshop.Core.Entity\ActionFigureWebshop.Core.Entity.csproj", "{5645E427-6B96-40AF-BC0C-51E0CD029850}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ActionFigureWebshop.Core.Entity", "ActionFigureWebshop.Core.Entity\ActionFigureWebshop.Core.Entity.csproj", "{5645E427-6B96-40AF-BC0C-51E0CD029850}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ActionFigureWebshop.Infrastructure.SQL", "ActionFigureWebshop.Infrastructure.SQL\ActionFigureWebshop.Infrastructure.SQL.csproj", "{F5321E1B-CC55-4753-AA0D-2FA3FE23F6D0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ActionFigureWebshop.Infrastructure.SQL", "ActionFigureWebshop.Infrastructure.SQL\ActionFigureWebshop.Infrastructure.SQL.csproj", "{F5321E1B-CC55-4753-AA0D-2FA3FE23F6D0}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{0553BF82-4C30-4F58-AF5C-728D3D14766F}"
 EndProject
@@ -15,9 +15,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastru
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Ui", "Ui", "{10604871-1C3C-4030-98EB-E4ECA64B292D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ActionFigureWebshop.RestApi", "ActionFigureWebshop.RestApi\ActionFigureWebshop.RestApi.csproj", "{B497A31D-D71F-48E3-8B77-7734E57BCBE8}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Repositories", "Repositories", "{72CC9990-9AE5-4397-8F25-2C1AAA9A8548}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ActionFigureWebshop.RestApi", "ActionFigureWebshop.RestApi\ActionFigureWebshop.RestApi.csproj", "{B497A31D-D71F-48E3-8B77-7734E57BCBE8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -50,7 +48,6 @@ Global
 		{5645E427-6B96-40AF-BC0C-51E0CD029850} = {0553BF82-4C30-4F58-AF5C-728D3D14766F}
 		{F5321E1B-CC55-4753-AA0D-2FA3FE23F6D0} = {4F7EA0F6-E88D-459C-BB8A-3DE7E7B409B8}
 		{B497A31D-D71F-48E3-8B77-7734E57BCBE8} = {10604871-1C3C-4030-98EB-E4ECA64B292D}
-		{72CC9990-9AE5-4397-8F25-2C1AAA9A8548} = {4F7EA0F6-E88D-459C-BB8A-3DE7E7B409B8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {898D0E61-66CC-419C-B1E8-792127515F12}
