@@ -6,7 +6,7 @@ namespace ActionFigureWebshop.Core.DomainServices
     public interface IActionFigureRepository
     {
         ActionFigure Creat(ActionFigure actionFigure);
-        List<ActionFigure> readAll();
+        List<ActionFigure> ReadAll();
 
         ActionFigure GetActionFigureById(int id);
 
