@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using ActionFigureWebshop.Core.ApplicationServices;
+using ActionFigureWebshop.Core.ApplicationServices.Services;
+using ActionFigureWebshop.Core.DomainServices;
+using ActionFigureWebshop.Infrastructure.SQL.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -25,7 +29,10 @@ namespace ActionFigureWebshop.RestApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCors();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            services.AddScoped<IActionFigureService, ActionFigureService>();
+            services.AddScoped<IActionFigureRepository, ActionFigureRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

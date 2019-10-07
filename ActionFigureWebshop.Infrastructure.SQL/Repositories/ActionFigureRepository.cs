@@ -4,7 +4,7 @@ using ActionFigureWebshop.Core.Entity;
 
 namespace ActionFigureWebshop.Infrastructure.SQL.Repositories
 {
-    public class ActionFigureRepositories : IActionFigureRepository
+    public class ActionFigureRepository : IActionFigureRepository
     {
         public ActionFigure Creat(ActionFigure actionFigure)
         {
