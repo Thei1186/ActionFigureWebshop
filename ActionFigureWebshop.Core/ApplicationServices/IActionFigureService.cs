@@ -5,7 +5,7 @@ namespace ActionFigureWebshop.Core.ApplicationServices
 {
     public interface IActionFigureService
     {
-        ActionFigure ReadActionFigure(ActionFigure figure);
+        ActionFigure ReadActionFigure(int id);
         ActionFigure CreateActionFigure(ActionFigure figure);
         ActionFigure DeleteActionFigure(ActionFigure figure);
         ActionFigure UpdateActionFigure(ActionFigure figure);

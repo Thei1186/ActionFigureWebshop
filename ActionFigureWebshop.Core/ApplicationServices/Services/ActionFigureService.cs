@@ -14,9 +14,9 @@ namespace ActionFigureWebshop.Core.ApplicationServices.Services
             _figureRepo = figureRepo;
         }
 
-        public ActionFigure ReadActionFigure(ActionFigure figure)
+        public ActionFigure ReadActionFigure(int id)
         {
-            return _figureRepo.GetActionFigureById(figure);
+            return _figureRepo.GetActionFigureById(id);
         }
 
         public ActionFigure CreateActionFigure(ActionFigure figure)
