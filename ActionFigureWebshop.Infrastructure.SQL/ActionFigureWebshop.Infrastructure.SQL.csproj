@@ -12,6 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ActionFigureWebshop.Core.Entity\ActionFigureWebshop.Core.Entity.csproj" />
     <ProjectReference Include="..\ActionFigureWebshop.Core\ActionFigureWebshop.Core.csproj" />
   </ItemGroup>
 

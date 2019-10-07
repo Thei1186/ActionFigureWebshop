@@ -45,7 +45,7 @@ namespace ActionFigureWebshop.Core.ApplicationServices.Services
 
         public List<ActionFigure> ReadAllActionFigures()
         {
-            return _figureRepo.readAll();
+            return _figureRepo.ReadAll();
         }
     }
 }
