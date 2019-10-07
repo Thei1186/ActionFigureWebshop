@@ -1,33 +1,51 @@
 ﻿using System.Collections.Generic;
+using System.IO;
+using ActionFigureWebshop.Core.DomainServices;
 using ActionFigureWebshop.Core.Entity;
 
 namespace ActionFigureWebshop.Core.ApplicationServices.Services
 {
     public class ActionFigureService: IActionFigureService
     {
+        private readonly IActionFigureRepository _figureRepo;
+
+        public ActionFigureService(IActionFigureRepository figureRepo)
+        {
+            _figureRepo = figureRepo;
+        }
+
         public ActionFigure ReadActionFigure(ActionFigure figure)
         {
-            throw new System.NotImplementedException();
+            return _figureRepo.GetActionFigureById(figure);
         }
 
         public ActionFigure CreateActionFigure(ActionFigure figure)
         {
-            throw new System.NotImplementedException();
+            if (figure == null)
+            {
+                throw new InvalidDataException("No figure was inserted");
+            }
+
+            return _figureRepo.Creat(figure);
         }
 
         public ActionFigure DeleteActionFigure(ActionFigure figure)
         {
-            throw new System.NotImplementedException();
+            if (figure == null)
+            {
+                throw new InvalidDataException("No action figure was found");
+            }
+            return _figureRepo.Delete(figure);
         }
 
         public ActionFigure UpdateActionFigure(ActionFigure figure)
         {
-            throw new System.NotImplementedException();
+            return _figureRepo.Update(figure);
         }
 
         public List<ActionFigure> ReadAllActionFigures()
         {
-            throw new System.NotImplementedException();
+            return _figureRepo.readAll();
         }
     }
 }
