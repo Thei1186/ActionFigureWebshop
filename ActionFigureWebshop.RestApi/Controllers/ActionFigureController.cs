@@ -66,7 +66,10 @@ namespace ActionFigureWebshop.RestApi.Controllers
         {
             try
             {
+                // we are getting the action figure
                 var actionfigure = _actionFigureService.ReadActionFigure(id);
+
+                // we are deleting the action figure 
                 return _actionFigureService.DeleteActionFigure(actionfigure);
             }
             catch (Exception e)
