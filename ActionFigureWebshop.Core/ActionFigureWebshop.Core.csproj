@@ -5,8 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="ApplicationServices\Services\" />
     <Folder Include="DomainServices\" />
-    <Folder Include="ApplicationServices\" />
   </ItemGroup>
 
 </Project>
