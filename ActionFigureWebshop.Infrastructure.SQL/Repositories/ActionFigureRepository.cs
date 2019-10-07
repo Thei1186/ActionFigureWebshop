@@ -13,6 +13,11 @@ namespace ActionFigureWebshop.Infrastructure.SQL.Repositories
         private readonly ActionFigureShopContext _ShopContext;
 
 
+        public ActionFigureRepository(ActionFigureShopContext shopContext)
+        {
+            _ShopContext = shopContext;
+        }
+
         public ActionFigure Creat(ActionFigure actionFigure)
         {
             _ShopContext.Attach(actionFigure).State = EntityState.Added;
