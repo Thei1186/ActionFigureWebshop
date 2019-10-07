@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using ActionFigureWebshop.Core.ApplicationServices;
+using ActionFigureWebshop.Core.Entity;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ActionFigureWebshop.RestApi.Controllers
@@ -10,36 +12,67 @@ namespace ActionFigureWebshop.RestApi.Controllers
     [ApiController]
     public class ActionFigureController : ControllerBase
     {
+        private readonly IActionFigureService _actionFigureService;
+        public ActionFigureController(IActionFigureService actionFigureService)
+        {
+            _actionFigureService = actionFigureService;
+        }
         // GET api/ActionFigure
         [HttpGet]
-        public ActionResult<IEnumerable<string>> Get()
+        public ActionResult<IEnumerable<ActionFigure>> Get()
         {
-            return new string[] { "value1", "value2" };
+            return _actionFigureService.ReadAllActionFigures();
         }
 
         // GET api/ActionFigure/5
         [HttpGet("{id}")]
-        public ActionResult<string> Get(int id)
+        public ActionResult<ActionFigure> Get(int id)
         {
-            return "value";
+            return _actionFigureService.ReadActionFigure(id);
         }
 
         // POST api/ActionFigure  create
         [HttpPost]
-        public void Post([FromBody] string value)
+        public ActionResult<ActionFigure> Post([FromBody] ActionFigure actionFigure)
         {
+            try
+            {
+               return _actionFigureService.CreateActionFigure(actionFigure);
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e.Message);
+            }
         }
 
         // PUT api/ActionFigure/5 update
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        public ActionResult<ActionFigure> Put(int id, [FromBody] ActionFigure actionFigure)
         {
+            try
+            {
+                return Ok(_actionFigureService.UpdateActionFigure(actionFigure)); 
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e.Message);
+
+            }
         }
 
         // DELETE api/ActionFigure/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public ActionResult<ActionFigure> Delete(int id)
         {
+            try
+            {
+                var actionfigure = _actionFigureService.ReadActionFigure(id);
+                return _actionFigureService.DeleteActionFigure(actionfigure);
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e.Message);
+            }
         }
     }
 }
