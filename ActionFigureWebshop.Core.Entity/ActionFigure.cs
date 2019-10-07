@@ -12,6 +12,6 @@ namespace ActionFigureWebshop.Core.Entity
         public double Weight { get; set; }
         public  string Material { get; set; }
         public  string Color { get; set; }
-        public int Amount { get; set;}
+        public int Amount { get; set;} // skal flyttes til en order istedetfor
     }
 }
