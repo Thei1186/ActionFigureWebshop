@@ -24,13 +24,13 @@ namespace ActionFigureWebshop.RestApi.Controllers
             return "value";
         }
 
-        // POST api/ActionFigure
+        // POST api/ActionFigure  create
         [HttpPost]
         public void Post([FromBody] string value)
         {
         }
 
-        // PUT api/ActionFigure/5
+        // PUT api/ActionFigure/5 update
         [HttpPut("{id}")]
         public void Put(int id, [FromBody] string value)
         {

@@ -8,7 +8,7 @@ namespace ActionFigureWebshop.Core.DomainServices
         ActionFigure Creat(ActionFigure actionFigure);
         List<ActionFigure> readAll();
 
-        ActionFigure GetActionFigureById(int id);
+        ActionFigure GetActionFigureById(ActionFigure actionFigure);
 
         ActionFigure update(ActionFigure actionFigure);
         ActionFigure delete(ActionFigure actionFigure);

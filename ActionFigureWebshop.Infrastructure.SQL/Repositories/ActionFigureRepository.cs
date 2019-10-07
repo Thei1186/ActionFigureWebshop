@@ -1,39 +1,48 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using ActionFigureWebshop.Core.DomainServices;
 using ActionFigureWebshop.Core.Entity;
+using Microsoft.EntityFrameworkCore;
 
 namespace ActionFigureWebshop.Infrastructure.SQL.Repositories
 {
     public class ActionFigureRepository : IActionFigureRepository
     {
+        // interface fra database
+        private readonly ActionFigureShopContext _ShopContext;
+
+
         public ActionFigure Creat(ActionFigure actionFigure)
         {
-            throw new System.NotImplementedException();
+            _ShopContext.Attach(actionFigure).State = EntityState.Added;
+            _ShopContext.SaveChanges();
+            return actionFigure;
         }
 
         public ActionFigure delete(ActionFigure actionFigure)
         {
-            throw new System.NotImplementedException();
+            var actionFigureToRemoved = _ShopContext.Remove(actionFigure).Entity;
+            _ShopContext.SaveChanges();
+            return actionFigureToRemoved;
         }
 
         public ActionFigure GetActionFigureById(ActionFigure actionFigure)
         {
-            throw new System.NotImplementedException();
+            return _ShopContext.ActionFigures.FirstOrDefault(af=> af.Id== actionFigure.Id);
         }
 
-        public ActionFigure GetActionFigureById(int id)
-        {
-            throw new System.NotImplementedException();
-        }
 
         public List<ActionFigure> readAll()
         {
-            throw new System.NotImplementedException();
+            return _ShopContext.ActionFigures.ToList();
         }
 
         public ActionFigure update(ActionFigure actionFigure)
         {
-            throw new System.NotImplementedException();
+            _ShopContext.Attach(actionFigure).State = EntityState.Modified;
+            _ShopContext.SaveChanges();
+            return actionFigure;
         }
     }
 }
