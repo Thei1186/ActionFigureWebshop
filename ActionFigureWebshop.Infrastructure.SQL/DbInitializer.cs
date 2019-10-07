@@ -47,8 +47,27 @@ namespace ActionFigureWebshop.Infrastructure.SQL
                 Size = 20,
                 Weight = 15
             };
+            ActionFigure a5 = new ActionFigure
+            {
+                Name = "Batman",
+                Color = "Pink",
+                Material = "russik atom rester",
+                Price = 50.00,
+                Size = 60,
+                Weight = 80
+            };
 
-            context.ActionFigures.AddRange(a1,a2,a3,a4);
+            ActionFigure a6 = new ActionFigure
+            {
+                Name = "Batman",
+                Color = "blue",
+                Material = "russik atom rester",
+                Price = 150.00,
+                Size = 300,
+                Weight = 18000
+            };
+
+            context.ActionFigures.AddRange(a1,a2,a3,a4,a5,a6);
             context.SaveChanges();
         }
     }
