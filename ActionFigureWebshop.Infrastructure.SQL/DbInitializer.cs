@@ -66,8 +66,16 @@ namespace ActionFigureWebshop.Infrastructure.SQL
                 Size = 300,
                 Weight = 18000
             };
-
-            context.ActionFigures.AddRange(a1,a2,a3,a4,a5,a6);
+            ActionFigure a7 = new ActionFigure
+            {
+                Name = "Garfield",
+                Color = "red",
+                Material = "Wood",
+                Price = 150.00,
+                Size = 300,
+                Weight = 23
+            };
+            context.ActionFigures.AddRange(a1,a2,a3,a4,a5,a6,a7);
             context.SaveChanges();
         }
     }
