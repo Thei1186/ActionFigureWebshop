@@ -17,11 +17,17 @@ namespace ActionFigureWebshop.RestApi.Controllers
         {
             _actionFigureService = actionFigureService;
         }
+
         // GET api/ActionFigure
         [HttpGet]
-        public ActionResult<IEnumerable<ActionFigure>> Get()
+        public ActionResult<IEnumerable<ActionFigure>> Get([FromQuery] Filter filter)
         {
-            return _actionFigureService.ReadAllActionFigures();
+            if (filter.CurrentPage > 0 && filter.ItemsPrPage > 0)
+            {
+                return Ok(_actionFigureService.FilteredReadAllActionFigures(filter));
+            }
+
+            return Ok(_actionFigureService.ReadAllActionFigures());
         }
 
         // GET api/ActionFigure/5
