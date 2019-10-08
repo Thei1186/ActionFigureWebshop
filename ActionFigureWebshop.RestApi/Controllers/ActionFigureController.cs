@@ -74,6 +74,7 @@ namespace ActionFigureWebshop.RestApi.Controllers
             }
             catch (Exception e)
             {
+
                 return BadRequest(e.Message);
             }
         }
