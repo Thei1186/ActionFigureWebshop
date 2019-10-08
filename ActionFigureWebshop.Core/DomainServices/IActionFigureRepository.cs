@@ -13,5 +13,7 @@ namespace ActionFigureWebshop.Core.DomainServices
         ActionFigure Update(ActionFigure actionFigure);
         ActionFigure Delete(ActionFigure actionFigure);
 
+        int Count();
+        List<ActionFigure> ReadAllFiltered(Filter filter);
     }
 }

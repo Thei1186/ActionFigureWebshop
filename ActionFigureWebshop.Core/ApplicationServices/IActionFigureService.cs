@@ -10,5 +10,6 @@ namespace ActionFigureWebshop.Core.ApplicationServices
         ActionFigure DeleteActionFigure(ActionFigure figure);
         ActionFigure UpdateActionFigure(ActionFigure figure);
         List<ActionFigure> ReadAllActionFigures();
+        List<ActionFigure> FilteredReadAllActionFigures(Filter filter);
     }
 }

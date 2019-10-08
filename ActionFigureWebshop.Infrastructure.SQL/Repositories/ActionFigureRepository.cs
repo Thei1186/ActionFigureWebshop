@@ -32,6 +32,17 @@ namespace ActionFigureWebshop.Infrastructure.SQL.Repositories
             return actionFigureToRemoved;
         }
 
+        public int Count()
+        {
+            return _ShopContext.ActionFigures.Count();
+        }
+
+        public List<ActionFigure> ReadAllFiltered(Filter filter)
+        {
+            return _ShopContext.ActionFigures.Skip((filter.CurrentPage - 1) * filter.ItemsPrPage)
+                .Take(filter.ItemsPrPage).ToList();
+        }
+
         public ActionFigure GetActionFigureById(int id)
         {
             return _ShopContext.ActionFigures.FirstOrDefault(af=> af.Id== id);
