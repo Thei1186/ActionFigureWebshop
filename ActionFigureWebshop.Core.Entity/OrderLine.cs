@@ -8,7 +8,7 @@ namespace ActionFigureWebshop.Core.Entity
         public ActionFigure ActionFigure { get; set; }
 
         public int OrderId { get; set; }
-        public Order order { get; set; }
+        public Order Order { get; set; }
 
         public int Quantity { get; set; }
         public double PriceWhenBought { get; set; }

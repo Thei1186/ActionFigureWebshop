@@ -24,12 +24,12 @@ namespace ActionFigureWebshop.Infrastructure.SQL.Repositories
 
         public List<Order> ReadAll()
         {
-            return _ShopContext.Orders.ToList();
+            return _ShopContext.Orders.Include(o => o.OrderLines).ThenInclude(ol => ol.ActionFigure).ToList();
         }
 
         public Order GetOrderById(int id)
         {
-            return _ShopContext.Orders.FirstOrDefault(o => o.OrderId == id);
+            return _ShopContext.Orders.Include(o => o.OrderLines).ThenInclude(ol => ol.ActionFigure).FirstOrDefault(o => o.OrderId == id);
         }
 
         public Order Update(Order order)

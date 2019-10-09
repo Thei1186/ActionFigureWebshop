@@ -13,8 +13,14 @@ namespace ActionFigureWebshop.Infrastructure.SQL
 
      protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            //    modelBuilder.Entity<OrderLine>().HasKey(ol => new {ol.ActionFigureId, ol.OrderId});
-            //    modelBuilder.Entity<OrderLine>().HasOne(ol => ol.ActionFigure).WithMany(a => a.)
+            modelBuilder.Entity<OrderLine>().HasKey(ol => new { ol.ActionFigureId, ol.OrderId });
+
+            modelBuilder.Entity<OrderLine>()
+                .HasOne(ol => ol.ActionFigure)
+                .WithMany(a => a.OrderLines);
+            modelBuilder.Entity<OrderLine>()
+                .HasOne(ol => ol.Order)
+                .WithMany(o => o.OrderLines);
         }
      public DbSet<ActionFigure> ActionFigures { get; set; }
      public DbSet<Order> Orders { get; set; }
