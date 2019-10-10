@@ -58,13 +58,13 @@ namespace ActionFigureWebshop.Infrastructure.SQL.Repositories
         {
            var oldA= _ShopContext.ActionFigures.FirstOrDefault(a => a.Id == actionFigure.Id);
           // _ShopContext.ActionFigures.Attach(actionFigure).State = EntityState.Modified;
-              oldA.Color = actionFigure.Color;
-             oldA.Material = actionFigure.Material;
-             oldA.Name = actionFigure.Name;
-             oldA.PathImage = actionFigure.PathImage;
-             oldA.Price = actionFigure.Price;
-             oldA.Size = actionFigure.Size;
-             oldA.Weight = actionFigure.Weight;
+            oldA.Color = actionFigure.Color;
+            oldA.Material = actionFigure.Material;
+            oldA.Name = actionFigure.Name;
+            oldA.PathImage = actionFigure.PathImage;
+            oldA.Price = actionFigure.Price;
+            oldA.Size = actionFigure.Size;
+            oldA.Weight = actionFigure.Weight;
 
             _ShopContext.SaveChanges();
             return actionFigure;
